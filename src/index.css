@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #1a1a1a;
+  color: #ffffff;
+}
+
+/* Loading Screen */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #2d5a4a 0%, #1a3a2a 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  transition: opacity 0.5s ease;
+}
+
+.loading-screen.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loading-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #b8e8d4;
+  margin-bottom: 2rem;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.loading-progress {
+  width: 300px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.loading-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #7ec8a8 0%, #4a9d7a 100%);
+  transition: width 0.3s ease;
+  border-radius: 4px;
+}
+
+.loading-tip {
+  margin-top: 2rem;
+  font-size: 1rem;
+  color: #7ec8a8;
+  max-width: 400px;
+  text-align: center;
+  opacity: 0.8;
+}
+
+/* HUD Overlay */
+.hud {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.hud-top {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  pointer-events: auto;
+}
+
+.zone-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #b8e8d4;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  animation: fadeInDown 0.5s ease;
+}
+
+.hud-bottom {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.controls-hint {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  background: rgba(0, 0, 0, 0.3);
+  padding: 8px 16px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+/* Dialog Box */
+.dialog-box {
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 600px;
+  background: rgba(26, 26, 26, 0.95);
+  border: 2px solid #4a9d7a;
+  border-radius: 12px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  animation: slideUp 0.3s ease;
+  pointer-events: auto;
+  z-index: 200;
+}
+
+.dialog-speaker {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #7ec8a8;
+  margin-bottom: 8px;
+}
+
+.dialog-content {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+  margin-bottom: 16px;
+}
+
+.dialog-close {
+  background: #4a9d7a;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.dialog-close:hover {
+  background: #5cb85c;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* Performance Monitor (dev only) */
+.perf-monitor {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #0f0;
+  padding: 8px;
+  font-size: 12px;
+  font-family: monospace;
+  border-radius: 4px;
+  z-index: 10000;
+}
