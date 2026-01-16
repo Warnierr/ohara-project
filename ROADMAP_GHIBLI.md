@@ -12,17 +12,17 @@
 
 - [x] Analyse projet actuel Three.js vanilla
 - [x] Création plan d'implémentation
-- [ ] Archiver ancienne version dans `archive-threejs-vanilla/`
-- [ ] Créer nouveau projet React + Vite
-- [ ] Installer stack R3F complète :
-  - `@react-three/fiber`
-  - `@react-three/drei`
-  - `@react-three/postprocessing`
-  - `@react-three/rapier`
-  - `ecctrl`
-  - `zustand`
-  - `gsap`
-  - `leva` (debug)
+- [x] Archiver ancienne version dans `archive-threejs-vanilla/`
+- [x] Créer nouveau projet React + Vite
+- [x] Installer stack R3F complète :
+  - [x] `@react-three/fiber` (8.17.10)
+  - [x] `@react-three/drei` (9.120.0)
+  - [x] `@react-three/postprocessing` (2.16.3)
+  - [x] `@react-three/rapier` (1.4.0)
+  - [x] `zustand` (5.0.1)
+  - [x] `gsap` (3.12.5)
+  - [x] `leva` (0.9.35)
+  - [x] `r3f-perf` (7.2.3) - monitoring performance
 
 ### Semaine 2 : Scene Ghibli de Base
 
@@ -76,23 +76,33 @@
   - Astrolabe/armillaire central
   - Modèle low-poly (<50k polygones)
 
+**📦 Ressources identifiées** : Voir [`ASSETS_A_TELECHARGER.md`](./ASSETS_A_TELECHARGER.md) et [`RESSOURCES_GHIBLI.md`](./RESSOURCES_GHIBLI.md)
+
 ### Semaine 6 : Robin + Environnement
 
-- [ ] **Robin enfant** (référence Image 3) :
+- [x] **Robin enfant** (modèle temporaire capsule) - ✅ En place
+- [ ] **Robin enfant final** (référence Image 3) :
   - Option 1 : Meshy AI (prompt One Piece style)
   - Option 2 : Sketchfab CC-BY + retopology
   - Option 3 : Commission artiste (budget 100-300€)
   - Rigging T-pose pour animations futures
-- [ ] **Environnement** :
-  - Pelouse verte (herbe stylisée)
-  - Petites tours rondes (style Ohara)
-  - Rochers (Poly Haven models)
-  - Chemins de terre
-- [ ] **Textures Poly Haven** :
-  - `wood_fine_grain` (arbre)
-  - `aerial_rocks` (rochers)
-  - `grass_field` (pelouse)
+- [x] **Environnement de base** :
+  - [x] Pelouse verte (herbe stylisée) - ✅ Ground.jsx
+  - [ ] Petites tours rondes (style Ohara)
+  - [ ] Rochers (Poly Haven models ou Quaternius)
+  - [ ] Chemins de terre
+- [x] **Textures** :
+  - [x] Textures watercolor terrain (VoxelCoreLab) - ✅ Téléchargées
+  - [ ] `wood_fine_grain` (arbre)
+  - [ ] `aerial_rocks` (rochers)
+  - [x] `grass_field` (pelouse) - ✅ Disponible
 - [ ] **Vérification** : Tous assets <5MB total, chargement <3 secondes
+
+**📦 Assets disponibles** :
+- ✅ `robin.glb`, `tree.glb` (modèles de base)
+- ✅ `professeur_clover.glb`, `saul.glb` (à intégrer)
+- ✅ Textures watercolor terrain (15 textures)
+- ⚠️ Voir [`ASSETS_A_TELECHARGER.md`](./ASSETS_A_TELECHARGER.md) pour checklist complète
 
 ---
 
@@ -333,10 +343,17 @@
 
 ## 🚀 Next Steps Immédiats
 
-1. **Valider cette roadmap** : Modifications souhaitées ?
-2. **Créer prototype MVP** : Code R3F complet (Scene, Robin, Shader)
-3. **Tester en local** : Vérifier rendu + contrôles
-4. **Commencer Phase 1 Semaine 1** : Archiver ancienne version + setup
+1. ✅ **Setup MVP R3F** : Code de base en place (Scene, Robin, Shader)
+2. ✅ **Documentation complète** : Tous les guides créés
+3. ✅ **Assets identifiés** : Ressources Ghibli documentées
+4. **Phase 1 Semaine 2-3** : Finaliser shader Ghibli + contrôles
+5. **Phase 1 Semaine 4** : Première interaction + optimisation perf
+6. **Phase 2** : Télécharger et intégrer assets 3D finals (Quaternius, Kenney)
+
+**📚 Documentation à consulter** :
+- [`ASSETS_A_TELECHARGER.md`](./ASSETS_A_TELECHARGER.md) - Checklist assets
+- [`RESSOURCES_GHIBLI.md`](./RESSOURCES_GHIBLI.md) - Sources open source
+- [`LORE_OHARA.md`](./LORE_OHARA.md) - Contexte narratif
 
 ---
 

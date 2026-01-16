@@ -4,6 +4,63 @@ Suivi des modifications et évolutions du projet.
 
 ---
 
+## [2.1.0] - 2026-01-15 - Documentation Complète & Assets
+
+### 📚 Documentation Ajoutée
+
+#### Nouveaux Documents
+- **LORE_OHARA.md** : Contexte complet de l'île d'Ohara (One Piece)
+  - Description de l'Arbre de la Connaissance
+  - Personnages clés (Robin, Clover, Saul, Olvia)
+  - Structure de l'île et environnement
+  - Spécifications techniques pour modélisation
+
+- **ASSETS_A_TELECHARGER.md** : Checklist complète des assets manquants
+  - NPCs prioritaires (Saul, Clover)
+  - Packs nature recommandés (Quaternius, Kenney)
+  - Organisation des fichiers
+  - Sources de téléchargement
+
+- **RESSOURCES_GHIBLI.md** : Guide ressources open source
+  - Packs essentiels (Quaternius Stylized Nature MegaKit)
+  - Textures watercolor terrain
+  - Outils et tutoriels style Ghibli
+  - Plan d'action immédiat
+
+- **ANIMATIONS_ET_DECOR.md** : Spécifications animations et décor
+
+### 🎨 Assets Intégrés
+
+- ✅ **Modèles 3D** :
+  - `professeur_clover.glb` - Modèle Professeur Clover
+  - `saul.glb` - Modèle Jaguar D. Saul (géant)
+  
+- ✅ **Textures** :
+  - Pack complet **VoxelCoreLab Watercolor Terrain Textures** (15 textures)
+  - Textures herbe, terre, pierre, eau (style aquarelle Ghibli)
+  - Format 1024x1024px, CC0 license
+
+### 📝 Documentation Mise à Jour
+
+- **README.md** :
+  - Section documentation complète avec liens vers tous les guides
+  - Structure du projet mise à jour
+  - Références aux nouveaux documents
+
+- **ROADMAP_GHIBLI.md** :
+  - Progrès Semaine 1 marqués comme complétés
+  - Assets disponibles documentés
+  - Liens vers guides d'assets
+  - Next steps mis à jour
+
+### 🔗 Organisation
+
+- Structure claire des fichiers de documentation
+- Liens croisés entre documents
+- Checklist d'assets facilement accessible
+
+---
+
 ## [2.0.0] - 2026-01-15 - Migration Stack Moderne
 
 ### 🎯 Vision

@@ -63,26 +63,42 @@ Ouvrez **http://localhost:5173**
 ## 📁 Structure
 
 ```
-src/
-├── components/
-│   ├── Scene.jsx           # Canvas R3F + setup
-│   ├── Robin.jsx           # Personnage joueur
-│   ├── OharaTree.jsx       # Arbre avec LOD
-│   ├── Ground.jsx          # Pelouse
-│   ├── InteractiveBook.jsx # Livre cliquable
-│   └── UI/
-│       ├── LoadingScreen.jsx
-│       ├── HUD.jsx
-│       └── DialogBox.jsx
+OHARA/
+├── src/                    # Code source principal (React Three Fiber)
+│   ├── components/
+│   │   ├── Scene.jsx           # Canvas R3F + setup
+│   │   ├── Robin.jsx           # Personnage joueur
+│   │   ├── OharaTree.jsx       # Arbre avec LOD
+│   │   ├── Ground.jsx          # Pelouse
+│   │   ├── InteractiveBook.jsx # Livre cliquable
+│   │   └── UI/
+│   │       ├── LoadingScreen.jsx
+│   │       ├── HUD.jsx
+│   │       └── DialogBox.jsx
+│   ├── shaders/
+│   │   └── ghibliShader.js     # Cel-shading custom
+│   ├── stores/
+│   │   └── useGameStore.js     # State Zustand
+│   ├── App.jsx                 # Root
+│   └── main.jsx                # Entry point
 │
-├── shaders/
-│   └── ghibliShader.js     # Cel-shading custom
+├── ohara-modern/           # Version Next.js (en développement)
+├── babylon-prototype/      # Prototype Babylon.js
+├── archive-threejs-vanilla/ # Ancienne version Three.js vanilla
 │
-├── stores/
-│   └── useGameStore.js     # State Zustand
+├── public/
+│   └── assets/
+│       └── models/         # Modèles 3D (.glb)
+│           ├── robin.glb
+│           ├── tree.glb
+│           ├── professeur_clover.glb
+│           └── saul.glb
 │
-├── App.jsx                 # Root
-└── main.jsx                # Entry point
+└── docs/                   # Documentation (fichiers .md à la racine)
+    ├── ROADMAP_GHIBLI.md
+    ├── LORE_OHARA.md
+    ├── ASSETS_A_TELECHARGER.md
+    └── ...
 ```
 
 ## 🎨 Palette Ghibli
@@ -131,11 +147,14 @@ src/
 
 ## 🔮 Prochaines Étapes (Roadmap)
 
+> 📖 **Voir la roadmap complète** : [`ROADMAP_GHIBLI.md`](./ROADMAP_GHIBLI.md)
+
 ### Phase 2 : Assets 3D Finals (Semaines 5-6)
 - [ ] Arbre Blender (tronc sculpté + racines)
 - [ ] Intérieur bibliothèque cylindrique
 - [ ] Robin enfant (Meshy AI → Blender)
 - [ ] Environnement (tours, rochers)
+- [ ] NPCs (Professeur Clover, Saul) - **Voir** [`ASSETS_A_TELECHARGER.md`](./ASSETS_A_TELECHARGER.md)
 
 ### Phase 3 : Gameplay (Semaines 7-8)
 - [ ] 3 zones (extérieur, bibliothèque, village)
@@ -168,9 +187,24 @@ console.log(window.gameStore)
 
 ## 📚 Documentation
 
-- **Plan complet** : Voir `implementation_plan.md`
-- **Roadmap 12 semaines** : Voir `ROADMAP_GHIBLI.md`
-- **Références visuelles** : Voir `REFERENCES_VISUELLES_IMAGES.md`
+### Documentation Principale
+- **Roadmap complète** : [`ROADMAP_GHIBLI.md`](./ROADMAP_GHIBLI.md) - Plan 12 semaines détaillé
+- **Lore & Contexte** : [`LORE_OHARA.md`](./LORE_OHARA.md) - Histoire de l'île d'Ohara (One Piece)
+- **Références visuelles** : [`REFERENCES_VISUELLES_IMAGES.md`](./REFERENCES_VISUELLES_IMAGES.md) - Direction artistique
+- **Changelog** : [`CHANGELOG.md`](./CHANGELOG.md) - Historique des versions
+
+### Guides Techniques
+- **Contexte IA** : [`CONTEXTE.md`](./CONTEXTE.md) - Guidelines Three.js pour développement assisté
+- **Stack & Besoins** : [`STACK_ET_BESOINS.md`](./STACK_ET_BESOINS.md) - Stack technique et ressources
+- **Spécifications scène** : [`SCENE_SPEC.md`](./SCENE_SPEC.md) - Spécifications détaillées de la scène
+- **Budget performance** : [`PERF_BUDGET.md`](./PERF_BUDGET.md) - Cibles de performance
+- **Règles de design** : [`DESIGN_RULES.md`](./DESIGN_RULES.md) - Règles de design pour agents IA
+
+### Assets & Ressources
+- **Assets à télécharger** : [`ASSETS_A_TELECHARGER.md`](./ASSETS_A_TELECHARGER.md) - Checklist des assets manquants
+- **Ressources Ghibli** : [`RESSOURCES_GHIBLI.md`](./RESSOURCES_GHIBLI.md) - Ressources open source recommandées
+- **Pipeline assets** : [`ASSET_PIPELINE.md`](./ASSET_PIPELINE.md) - Workflow de gestion des assets
+- **Animations & Décor** : [`ANIMATIONS_ET_DECOR.md`](./ANIMATIONS_ET_DECOR.md) - Spécifications animations
 
 ## 🎭 Crédits
 

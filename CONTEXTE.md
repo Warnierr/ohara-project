@@ -4,9 +4,28 @@ Ce document contient les spécifications techniques et les bonnes pratiques Thre
 
 ## 🎯 Projet OHARA
 
-**Inspiré de One Piece** - Mini-monde 3D multijoueur centré sur l'Arbre du Savoir, permettant aux joueurs d'explorer une pelouse paisible.
+**Inspiré de One Piece** - Expérience narrative immersive où **Robin enfant** explore l'île d'Ohara paisible dans un style **Ghibli/One Piece**, construite avec **React Three Fiber**.
+
+**État actuel** : Migration en cours vers React Three Fiber (R3F) pour une architecture moderne et performante.
 
 ## 🔧 Stack Technique
+
+### Stack Actuelle (R3F - En développement)
+
+| Composant | Version/Tech | Notes |
+|-----------|--------------|-------|
+| **React** | 18.3.1 | UI framework |
+| **Three.js** | 0.170.0 | 3D engine |
+| **React Three Fiber** | 8.17.10 | React renderer pour Three.js |
+| **@react-three/drei** | 9.120.0 | Helpers R3F (Environment, Html, etc.) |
+| **@react-three/postprocessing** | 2.16.3 | Post-processing effects |
+| **@react-three/rapier** | 1.4.0 | Physics engine |
+| **Zustand** | 5.0.1 | State management |
+| **GSAP** | 3.12.5 | Animations |
+| **Vite** | 6.0.3 | Build tool |
+| **r3f-perf** | 7.2.3 | Performance monitoring |
+
+### Stack Legacy (Archive)
 
 | Composant | Version/Tech | Notes |
 |-----------|--------------|-------|
@@ -15,6 +34,8 @@ Ce document contient les spécifications techniques et les bonnes pratiques Thre
 | **Multijoueur** | Socket.io 4.8.3 | Client + Serveur Node.js |
 | **Serveur** | Express 4.x | Port 3000 |
 | **Client** | Vanilla JS ES6+ | Port 5173 (dev) |
+
+**Note** : L'ancienne version vanilla Three.js est archivée dans `archive-threejs-vanilla/`. Le développement actif se fait avec React Three Fiber.
 
 ---
 
@@ -227,18 +248,43 @@ Avant de déployer ou proposer du code, **VÉRIFIER** :
 
 ```
 OHARA/
-├── src/
-│   ├── Scene.js          # Setup Three.js principal
-│   ├── OharaTree.js      # Arbre du Savoir (LOD 3 niveaux)
-│   ├── Environment.js    # Pelouse, fleurs, ciel
-│   ├── Player.js         # Avatar joueur
-│   ├── Controls.js       # Input WASD
-│   └── Network.js        # Client Socket.io
-├── server/
-│   ├── index.js          # Serveur Express + Socket.io
-│   └── Game.js           # State multijoueur
-├── index.html            # UI (login, HUD)
-└── main.js               # Point d'entrée
+├── src/                    # Code source principal (React Three Fiber)
+│   ├── components/
+│   │   ├── Scene.jsx       # Canvas R3F + setup
+│   │   ├── Robin.jsx       # Personnage joueur
+│   │   ├── OharaTree.jsx   # Arbre du Savoir (LOD 3 niveaux)
+│   │   ├── Ground.jsx      # Pelouse
+│   │   ├── InteractiveBook.jsx
+│   │   └── UI/             # Composants UI
+│   ├── shaders/
+│   │   └── ghibliShader.js # Cel-shading custom
+│   ├── stores/
+│   │   └── useGameStore.js # State Zustand
+│   ├── App.jsx             # Root
+│   └── main.jsx            # Entry point
+│
+├── ohara-modern/           # Version Next.js (en développement)
+├── babylon-prototype/      # Prototype Babylon.js
+├── archive-threejs-vanilla/ # Ancienne version Three.js vanilla
+│   ├── src/
+│   │   ├── Scene.js        # Setup Three.js principal (legacy)
+│   │   ├── OharaTree.js    # Arbre du Savoir (LOD 3 niveaux)
+│   │   ├── Environment.js  # Pelouse, fleurs, ciel
+│   │   ├── Player.js       # Avatar joueur
+│   │   ├── Controls.js     # Input WASD
+│   │   └── Network.js      # Client Socket.io
+│   └── server/
+│       ├── index.js        # Serveur Express + Socket.io
+│       └── Game.js         # State multijoueur
+│
+├── public/
+│   └── assets/
+│       └── models/         # Modèles 3D (.glb)
+│
+└── docs/                   # Documentation (fichiers .md à la racine)
+    ├── ROADMAP_GHIBLI.md
+    ├── LORE_OHARA.md
+    └── ...
 ```
 
 ---
