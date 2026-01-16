@@ -34,6 +34,8 @@ Ce document sert de référence pour la recherche d'assets compatibles avec le p
 *   Skybox "Anime Sky" (Ciel bleu avec gros nuages blancs peints).
 
 ## 🔗 Sources Recommandées
+> **VOIR LE GUIDE COMPLET : [`RESSOURCES_GHIBLI.md`](./RESSOURCES_GHIBLI.md)** pour les liens de téléchargement directs et le plan d'action.
+
 *   **Sketchfab** (Filtre: Downloadable, License CC0/CC-BY). Mots clés : *Stylized, Ghibli, Handpainted*.
 *   **Kenney.nl** : Packs "Nature", "Pirate" (Bien pour le low poly simple).
 *   **Itch.io** : Game Assets Gratuits.
